@@ -11,6 +11,7 @@
   <br>
     <div>当前型号：<span id="aaa"></span></div>
     <button onclick='goto()'>判断ios后跳转</button>
+    <button onclick='goto1()'>判断ios后跳转1</button>
     <button onclick='goto2()'>window.location.href跳转</button>
     <button onclick='goto3()'>window.open跳转</button>
   </body>
@@ -21,6 +22,16 @@
     const url = 'https://eone.fjmu.edu.cn/web/lk?q=Zq715HwD6b24TL0A326SLTAr7W2U07ChdtLCWZZEuaUp50Z-s0YFDOylwJ4glRo0nv1C6Q70IEuA10ovb-UfI97HWxokHzsZ64MQmacSM0xY2L365RYr5vnrPwptYDHblxRMZJtSPlyiKeX5GAaGsQToTmciE1-cnnf5bGHk78A.&code=b6a352d3ecc94285987554717fd89db0&authenticatize=LiveID&state=7434593100b24fd0ad8343363a161e1c'
 
   function goto(){
+  // 判断是ios还是安卓
+  const isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/) // ios终端
+  if (isiOS) {
+    window.location.href = url
+  } else {
+    window.open(url)
+  }
+  }
+
+  function goto1(){
     // 判断是ios还是安卓
     // const isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/) // ios终端
     const isiOS = u.includes('iPhone') || u.includes('iPad')
@@ -35,7 +46,7 @@
       window.location.href = url
   }
   function goto3(){
-      window.location.href = url
+    window.open = url
   }
 </script>
 </html>
