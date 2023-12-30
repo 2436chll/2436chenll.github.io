@@ -1,29 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>lili</title>
-</head>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lili</title>
+  </head>
 
-<body>
-  <button onclick='goto()'>跳转</button>
-</body>
-<script>
+  <body>
+    <button onclick='goto()'>跳转</button>
+  </body>
+  <script>
   function goto(){
-    const url = 'https://www.baidu.com/'
+    const url = 'https://eone.fjmu.edu.cn/web/lk?q=Zq715HwD6b24TL0A326SLTAr7W2U07ChdtLCWZZEuaUp50Z-s0YFDOylwJ4glRo0nv1C6Q70IEuA10ovb-UfI97HWxokHzsZ64MQmacSM0xY2L365RYr5vnrPwptYDHblxRMZJtSPlyiKeX5GAaGsQToTmciE1-cnnf5bGHk78A.&code=b6a352d3ecc94285987554717fd89db0&authenticatize=LiveID&state=7434593100b24fd0ad8343363a161e1c'
     const u = navigator.userAgent
-  // 判断是ios还是安卓
-  // const isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/) // ios终端
-  const isiOS = u.includes('iPhone') || u.includes('iPad')
-  const isSafari = u.includes('Safari')
-  if (isiOS || isSafari) {
-    window.location.href = url
-  } else {
-    window.open(urlF)
-  }
+    // 判断是ios还是安卓
+    // const isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/) // ios终端
+    const isiOS = u.includes('iPhone') || u.includes('iPad')
+    const isSafari = u.includes('Safari')
+    if (isiOS || isSafari) {
+      window.location.href = url
+    } else {
+      window.open(urlF)
+    }
   }
 </script>
 </html>
