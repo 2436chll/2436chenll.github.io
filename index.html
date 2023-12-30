@@ -9,6 +9,21 @@
 </head>
 
 <body>
-  <button onclick=''>跳转</button>
+  <button onclick='goto'>跳转</button>
 </body>
+<script>
+  function goto(){
+    const url = 'https://www.baidu.com/'
+    const u = navigator.userAgent
+  // 判断是ios还是安卓
+  // const isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/) // ios终端
+  const isiOS = u.includes('iPhone') || u.includes('iPad')
+  const isSafari = u.includes('Safari')
+  if (isiOS || isSafari) {
+    window.location.href = url
+  } else {
+    window.open(urlF)
+  }
+  }
+</script>
 </html>
